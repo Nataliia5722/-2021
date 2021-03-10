@@ -250,18 +250,23 @@ NameEn = Entry(root, textvariable=Name)
 NameEn.grid(row=6, column=1)
 
 S1En = OptionMenu(root, Symptom1,*OPTIONS)
+S1En.config(width=25)
 S1En.grid(row=7, column=1)
 
 S2En = OptionMenu(root, Symptom2,*OPTIONS)
+S2En.config(width=25)
 S2En.grid(row=8, column=1)
 
 S3En = OptionMenu(root, Symptom3,*OPTIONS)
+S3En.config(width=25)
 S3En.grid(row=9, column=1)
 
 S4En = OptionMenu(root, Symptom4,*OPTIONS)
+S4En.config(width=25)
 S4En.grid(row=10, column=1)
 
 S5En = OptionMenu(root, Symptom5,*OPTIONS)
+S5En.config(width=25)
 S5En.grid(row=11, column=1)
 
 
