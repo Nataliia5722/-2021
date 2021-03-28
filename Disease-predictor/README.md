@@ -1,4 +1,4 @@
-# Artificial-Intelligence-2021
+# Disease prediction application
 
 This system is used for making a diagnosis based on the patient's symptoms using Machine Learning algorithms. 
 
