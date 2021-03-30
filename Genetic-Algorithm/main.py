@@ -55,6 +55,7 @@ class Route:
         self._fitness = None
         self.chance = None
 
+
     @property
     def fitness(self):
         distances = (City.distance(self._genes[i], self._genes[i + 1]) for i in range(-1, len(self._genes) - 1))
@@ -238,11 +239,13 @@ def main():
     l3.config(font=(8))
     l3.grid(row=3, column=0, columnspan=2, padx=20)
 
+    bf = ga.generation*5
     lf = Label(window, justify=LEFT, background="light goldenrod yellow", text="Функция приспособленности:")
     lf.config(font=(8))
     lf.grid(padx=100)
 
     l4 = Label(window, justify=LEFT, text=best_fitness)
+    #l4 = Label(window, justify=LEFT, text=d)
     l4.config(font=(8))
     l4.grid(padx=20)
 
@@ -254,6 +257,14 @@ def main():
     l5.config(font=(8))
     l5.grid(padx=0)
 
+    lw = Label(window, background="light goldenrod yellow", text="Значение оптимального расстояния в км:")
+    lw.config(font=(8))
+    lw.grid(padx=0)
+
+    l6 = Label(window, justify=LEFT, text=bf)
+    l6.config(font=(8))
+    l6.grid(padx=0)
+
     #print('Best route:', fittest)
     #print('Best fitness:', best_fitness)
     #print('Generations:', ga.generation)
@@ -262,3 +273,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
