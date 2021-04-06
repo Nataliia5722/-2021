@@ -1,6 +1,7 @@
 from tkinter import *
 import numpy as np
 import pandas as pd
+from tkinter.messagebox import showinfo
 # from gui_stuff import *
 
 l1=['back_pain','constipation','abdominal_pain','diarrhoea','mild_fever','yellow_urine',
@@ -75,9 +76,14 @@ X_test= tr[l1]
 y_test = tr[["prognosis"]]
 np.ravel(y_test)
 # ------------------------------------------------------------------------------------------------------
+def popup_showinfo():
+    showinfo("ShowInfo", "Введите имя!")
+
 
 def DecisionTree():
-
+    if NameEn.get()=="":
+        print(NameEn.get()+"Please, write your name")
+        popup_showinfo()
     from sklearn import tree
 
     clf3 = tree.DecisionTreeClassifier()   # empty model of the decision tree
@@ -193,7 +199,7 @@ def NaiveBayes():
 
 root = Tk()
 root.title("Disease Predictor using Machine Learning")
-root.configure(background='')
+#root.configure(background='')
 
 # entry variables
 Symptom1 = StringVar()
