@@ -298,7 +298,7 @@ def NaiveBayes():
 # gui_stuff------------------------------------------------------------------------------------
 
 root = Tk()
-root.title("Постановка дивагноза по симптомам пациента")
+root.title("Постановка диагноза по симптомам пациента")
 #root.configure(background='')
 
 # entry variables
@@ -316,7 +316,7 @@ Name = StringVar()
 
 # Heading
 
-w2 = Label(root, justify=CENTER, text="Постановка дивагноза по симптомам пациента")
+w2 = Label(root, justify=CENTER, text="Постановка диагноза по симптомам пациента")
 w2.config(font=("Aharoni", 20))
 w2.grid(row=1, column=0, columnspan=2, padx=100)
 # labels
